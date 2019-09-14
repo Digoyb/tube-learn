@@ -1,10 +1,10 @@
 using System;
+using TubeLearn.Domain.Entities.Base;
 
 namespace TubeLearn.Domain.entities
 {
-    public class Favorito
+    public class Favorito: EntityBase
     {
-        public Guid Id { get; set; }
         public Video Video { get; set; }
         public Usuario Usuario { get; set; }
     }

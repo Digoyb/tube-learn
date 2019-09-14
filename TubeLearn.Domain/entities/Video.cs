@@ -1,11 +1,12 @@
 using System;
+using TubeLearn.Domain.Entities.Base;
 using TubeLearn.Domain.Enums;
 
 namespace TubeLearn.Domain.entities
 {
-    public class Video
+    public class Video : EntityBase
     {
-        public Guid Id { get; set; }
+
         public Canal Canal { get; set; }
         public Playlist Playlist { get; set; }
         public string Descricao { get; set; }
