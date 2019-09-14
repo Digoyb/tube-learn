@@ -1,4 +1,5 @@
 using System;
+using TubeLearn.Domain.Enums;
 
 namespace TubeLearn.Domain.entities
 {
@@ -12,7 +13,7 @@ namespace TubeLearn.Domain.entities
         public string OrdemNaPlaylist { get; set; }
         public string IdVideoYoutube { get; set; }
         public Usuario UsuarioSugeriu { get; set; }
-        public string Status { get; set; }
+        public EnumStatus Status { get; set; }
         
     }
 }

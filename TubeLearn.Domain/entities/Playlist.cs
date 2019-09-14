@@ -1,4 +1,5 @@
 using System;
+using TubeLearn.Domain.Enums;
 
 namespace TubeLearn.Domain.entities
 {
@@ -8,6 +9,6 @@ namespace TubeLearn.Domain.entities
         public Usuario Usuario { get; set; }
 
         //Em análise, aprovado, reprovado
-        public string Status { get; set; }
+        public EnumStatus Status { get; set; }
     }
 }
