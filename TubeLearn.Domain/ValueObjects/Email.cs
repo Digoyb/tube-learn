@@ -1,7 +1,23 @@
+using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
+using TubeLearn.Domain.Resources;
+
 namespace TubeLearn.Domain.ValueObjects
 {
-    public class Email
+    public class Email : Notifiable
     {
-        public string Endereco { get; set; }
+        protected Email()
+        {
+
+        }
+        public Email(string endereco)
+        {
+            Endereco = endereco;
+
+            new AddNotifications<Email>(this)
+                .IfNotEmail(x => x.Endereco, MSG.X0_INVALIDO.ToFormat("E-mail"));
+        }
+
+        public string Endereco { get; private set; }
     }
 }
